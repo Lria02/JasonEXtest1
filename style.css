@@ -1,0 +1,254 @@
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margins */
+    background-color: rgb(50, 49, 49); /* Background color */
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 1350px;
+    height: 600px;
+    border: 2px solid white; /* White border */
+    box-sizing: border-box; /* Ensure border is included in the size */
+    display: flex;
+    flex-direction: column; /* Keep this for header */
+    overflow-y: auto; /* Prevent content from overflowing */
+}
+
+.container-content {
+    display: flex; /* Add flex to align .charIMG and .Introduction side by side */
+    
+    gap: 20px; /* Add spacing between the two */
+}
+
+.container > header {
+    /* Ensure header stays at the top */
+    width: 100%; /* Make the header span the full width of the container */
+    font-size: 25px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align the content inside the header to the right */
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0); /* Optional: give the header a background for contrast */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%; /* Make the header span the full width of the container */
+    font-size: 25px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align the content inside the header to the right */
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0); /* Optional: give the header a background for contrast */
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Vertically center items */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure it takes full width */
+}
+
+header ul li:first-child {
+    margin-right: auto; /* Push "Jason EX" to the left */
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #007bff; /* Optional hover effect */
+}
+
+header ul li {
+    z-index: 1;
+}
+
+
+/* Main Content */
+.charIMG img {
+    display: flex;
+    max-width: 400px;
+    
+}
+
+.Introduction {
+    display: flex;
+    margin-top: 10%;
+    max-width: 600px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+    max-height: 250px;
+}
+
+.container-story {
+    display: flex; /* Align Story and Jason2 beside each other */
+    gap: 5px; /* Add space between Story and Jason2 */
+    
+}
+
+.Jason2 img {
+    display: flex;
+    max-width: 400px;
+}
+.Story {
+    flex: 1;
+    margin-left: 5%;
+    display: flex;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+    max-height: 450px;
+    min-width: 800px;
+    overflow-y: auto;
+}
+
+.Lore h1 {
+    margin-top: 5%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-right: 25%;
+}
+
+.Ability {
+    margin-top: 10%;
+}
+.Ability h1 {
+    text-align: center;
+}
+
+.container-ability {
+    display: flex;
+    gap: 10px; /* Adds margin between the sections */
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.section {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ffffff;
+    width: 30%; /* Adjust width so all three fit in a row */
+}
+
+.content-ability {
+    font-size: 15px;
+    padding: 10px;
+    height: 200px; /* Set a fixed height */
+    overflow-y: auto; /* Enable scrolling for overflowing content */
+    color: rgb(239, 239, 239);
+    text-align: left; /* Align content text */
+}
+
+.AbilityHeader {
+    display: flex;
+    background: linear-gradient(to right, blue, rgb(0, 0, 0), blue);
+    color: white;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+.Ending {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 10% auto; /* Center the box horizontally and set vertical margin */
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+    min-height: 200px;
+    max-width: 800px;
+    overflow-y: auto;
+    text-align: center; /* Center the text inside */
+}
+
+.Ending p {
+    text-align: center; /* Center the text content */
+}
+
+.Ending p a {
+    font-size: 25px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.Photo h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.containerBox {
+    margin-top: 5%;
+    display: flex; /* Use flexbox to align images horizontally */
+    justify-content: space-between; /* Distribute space between the images */
+    width: 100%; /* Full width */
+    max-height: 200px; /* Set height for the container */
+    z-index: 1;
+}
+
+.box {
+    width: 10%; /* Compress each box when not hovered */
+    height: 100%;
+    max-width: 400px; /* Set max width for each box */
+    overflow: hidden;
+    transition: width 0.4s ease; /* Smooth transition for expanding */
+    position: relative;
+    display: flex; /* Enable flexbox inside each box */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+}
+
+.box img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+    transform: translateY(0);
+}
+
+.box:hover {
+    width: 60%; /* Expand the hovered box */
+    max-width: 400px; /* Ensure max width on hover */
+}
+
+.box:hover img {
+    filter: grayscale(0); /* Remove grayscale on hover */
+    transform: translateY(0); /* No movement, just expand */
+}
+
+.box img {
+    transition: transform 0.4s ease, filter 0.4s ease; /* Ensure image transition is smooth */
+}

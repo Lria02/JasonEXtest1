@@ -1,4 +1,5 @@
 body {
+    
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -10,6 +11,7 @@ body {
 }
 
 .container {
+    overflow-x: hidden;
     width: 1350px;
     height: 600px;
     border: 2px solid white; /* White border */
@@ -95,23 +97,23 @@ header ul li {
 
 .container-story {
     display: flex; /* Align Story and Jason2 beside each other */
-    gap: 5px; /* Add space between Story and Jason2 */
     
 }
 
 .Jason2 img {
     display: flex;
-    max-width: 400px;
+    max-width: 350px;
 }
 .Story {
     flex: 1;
     margin-left: 5%;
     display: flex;
     border: 2px solid rgb(255, 255, 255);
-    padding: 20px;
+    padding: 10px;
+    max-width: 800px;
+    min-width: 180px;
     max-height: 450px;
-    min-width: 800px;
-    overflow-y: auto;
+    
 }
 
 .Lore h1 {
@@ -251,4 +253,102 @@ header ul li {
 
 .box img {
     transition: transform 0.4s ease, filter 0.4s ease; /* Ensure image transition is smooth */
+}
+
+
+@media (max-width: 768px) and (max-height: 1024px) {
+
+
+    .container {
+        height: 800px;
+        max-height: 1024px;
+        max-width: 600px;
+        border: 2px solid white; /* White border */
+        box-sizing: border-box; /* Ensure border is included in the size */
+        display: flex;
+        flex-direction: column; /* Keep this for header */
+        overflow-y: auto; /* Prevent content from overflowing */
+    }
+
+    header {
+        
+        position: sticky;
+        top: 0;
+        width: 100%; /* Make the header span the full width of the container */
+        font-size: 25px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: flex-end; /* Align the content inside the header to the right */
+        box-sizing: border-box;
+        background-color: rgb(0, 0, 0); /* Optional: give the header a background for contrast */
+    }
+    header ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between; /* Space between left and right items */
+        align-items: center; /* Vertically center items */
+        margin: 0;
+        padding: 0;
+        width: 100%; /* Ensure it takes full width */
+    }
+    
+    header ul li:first-child {
+        display: none;
+        margin-right: auto; /* Push "Jason EX" to the left */
+    }
+    
+    header ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 10px;
+        transition: color 0.3s ease;
+    }
+    
+    header ul li a:hover {
+        color: #007bff; /* Optional hover effect */
+    }
+    
+    header ul li {
+        z-index: 1;
+    }
+
+
+    .charIMG img {
+        display: flex;
+        max-width: 200px;
+        
+    }
+    
+    .container-content {
+        max-width: 425px;
+    }
+
+    .Introduction {
+        display: flex;
+        margin-top: 10%;
+        max-width: 450px;
+        border: 2px solid rgb(255, 255, 255);
+        padding: 20px;
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+    
+    .Jason2 img {
+        display: flex;
+        max-width: 200px;
+    }
+
+    .Story {
+        display: flex;
+        margin-top: 10%;
+        max-width: 200px;
+        border: 2px solid rgb(255, 255, 255);
+        padding: 20px;
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+
+
 }

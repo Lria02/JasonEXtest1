@@ -177,28 +177,57 @@ header ul li {
 
 
 
-.Ending {
+/* Styles for .explanation container */
+.explanation {
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;  /* Stack items vertically */
+    flex: 1;
+    margin: 0 auto;          /* Center the container horizontally */
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    margin: 10% auto; /* Center the box horizontally and set vertical margin */
     border: 2px solid rgb(255, 255, 255);
-    padding: 20px;
-    min-height: 200px;
+    padding: 10px;
     max-width: 800px;
+    min-height: 300px;
     overflow-y: auto;
-    text-align: center; /* Center the text inside */
+}
+
+.explanation h1 {
+    text-align: center;    /* Center the heading text */
+    margin-bottom: 10px;   /* Adds spacing below the heading */
+}
+
+.explanation p {
+    text-align: left;      /* Left-aligns the paragraph text */
+    max-width: 800px;      /* Optional: Set a maximum width for better readability */
+}
+
+/* Styles for .Ending container */
+.Ending {
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column; /* Stack items vertically */
+    flex: 1;
+    margin: 5% auto;         /* Center the container horizontally */
+    display: flex;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    max-width: 800px;
+    min-height: 300px;
+    overflow-y: auto;
 }
 
 .Ending p {
-    text-align: center; /* Center the text content */
+    text-align: center;     /* Center the paragraph text */
 }
 
 .Ending p a {
     font-size: 25px;
     color: white;
 }
+
+
 
 
 
